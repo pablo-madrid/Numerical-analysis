@@ -1,0 +1,1 @@
+ function x = bissec(f, a, b, tol)     x = 0;   if (f(a) * f(b) < 0)     x = (a + b) / 2;     while (abs(a - b) > tol)       if (f(a) * f(x) < 0)         b = x;       else         a = x;       endif       x = (a + b) / 2;     endwhile     printf ("A estimativa da raiz é: \n");   else     printf ("Não tem raízes no intervalo inserido.\n")   endif endfunction
